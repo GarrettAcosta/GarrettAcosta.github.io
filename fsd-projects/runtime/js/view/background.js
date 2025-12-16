@@ -67,7 +67,7 @@ var background = function (window) {
 
       // TODO 3: Part 1 - Add a tree
       tree = draw.bitmap("img/tree.png");
-      tree.x = 0;
+      tree.x = 500;
       tree.y = groundY - tree.height;
       background.addChild(tree);
     } // end of render function - DO NOT DELETE
@@ -75,19 +75,19 @@ var background = function (window) {
     // Perform background animation
     // called on each timer "tick" - 60 times per second
     function update() {
-      // useful variables
+      // useful variables8
       var canvasWidth = app.canvas.width;
       var canvasHeight = app.canvas.height;
       var groundY = ground.y;
 
       // TODO 3: Part 2 - Move the tree!
-      tree.x = tree.x - 1;
+      tree.x = tree.x + - 3;
       if (tree.x < -250) {
         tree.x = canvasWidth;
       }
 
       // TODO 4: Part 2 - Parallax
-      for (var i; i < buildings.length; i++) {
+      for (var i = 0; i < buildings.length; i++) {
         var eachBuilding = buildings[i];
         eachBuilding.x -= 1;
 
