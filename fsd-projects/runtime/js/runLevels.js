@@ -36,7 +36,7 @@ createSawBlade(999, 20)
 var enemy = game.createGameItem("enemy", 25);
 var redSquare = draw.rect(50, 50, "red");
 redSquare.x = 300;
-redSquare.y = 25;
+redSquare.y = -50;
 enemy.addChild(redSquare);
 enemy.x = 400;
 enemy.y = 300
