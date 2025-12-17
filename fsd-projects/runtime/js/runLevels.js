@@ -14,7 +14,7 @@ var runLevels = function (window) {
     var levelData = window.opspark.levelData;
 
     // set this to true or false depending on if you want to see hitzones
-    game.setDebugMode(false);
+    game.setDebugMode(true);
 
     // TODOs 5 through 11 go here
     // BEGIN EDITING YOUR CODE HERE
@@ -35,12 +35,19 @@ createSawBlade(990, 180)
 createSawBlade(999, 20)
 var enemy = game.createGameItem("enemy", 25);
 var redSquare = draw.rect(50, 50, "red");
-redSquare.x = 25;
+redSquare.x = 300;
 redSquare.y = 25;
 enemy.addChild(redSquare);
-enemy.x = 300;
+enemy.x = 400;
 enemy.y = 30;
-
+game.addGameItem(enemy);
+enemy.velocity = 9;
+enemy.rotationalVelocity = 1;
+enemy.onPlayerCollision = function () {game.changeIntegrity(-100)};
+function enemy.onProjectileCollision (){
+  game.increaseScore(100);
+enemy.fadeOut();
+}
 
     function startLevel() {
       // TODO 13 goes below here
