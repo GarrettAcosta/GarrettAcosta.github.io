@@ -39,12 +39,13 @@ redSquare.x = 300;
 redSquare.y = 25;
 enemy.addChild(redSquare);
 enemy.x = 400;
-enemy.y = 30;
+enemy.y = 300
+;
 game.addGameItem(enemy);
 enemy.velocity = 9;
 enemy.rotationalVelocity = 1;
 enemy.onPlayerCollision = function () {game.changeIntegrity(-100)};
-function enemy.onProjectileCollision (){
+enemy.OnProjectileCollision = function (){
   game.increaseScore(100);
 enemy.fadeOut();
 }
