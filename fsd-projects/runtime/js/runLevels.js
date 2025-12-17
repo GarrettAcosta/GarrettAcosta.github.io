@@ -43,7 +43,7 @@ enemy.y = 300
 ;
 game.addGameItem(enemy);
 enemy.velocity = 9;
-enemy.rotationalVelocity = 1;
+enemy.rotationalVelocity = 999999;
 enemy.onPlayerCollision = function () {game.changeIntegrity(-100)};
 enemy.OnProjectileCollision = function (){
   game.increaseScore(100);
