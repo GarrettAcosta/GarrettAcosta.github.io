@@ -35,15 +35,15 @@ createSawBlade(990, 180)
 createSawBlade(999, 20)
 var enemy = game.createGameItem("enemy", 25);
 var redSquare = draw.rect(50, 50, "red");
-redSquare.x = 300;
+redSquare.x = 10;
 redSquare.y = -50;
 enemy.addChild(redSquare);
 enemy.x = 400;
 enemy.y = 300
-;
+
 game.addGameItem(enemy);
-enemy.velocity = 9;
-enemy.rotationalVelocity = 999999;
+enemy.velocity = -9;
+enemy.rotationalVelocity = 999;
 enemy.onPlayerCollision = function () {game.changeIntegrity(-100)};
 enemy.OnProjectileCollision = function (){
   game.increaseScore(100);
